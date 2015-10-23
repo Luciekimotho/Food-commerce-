@@ -1,0 +1,1 @@
+web: gunicorn chapchap.wsgi --log-file -

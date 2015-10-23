@@ -14,3 +14,8 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "chapchap.settings")
 
 application = get_wsgi_application()
+try:
+    from dj import Cling
+    application = Cling(get_wsgi_application())
+except:
+    pass
